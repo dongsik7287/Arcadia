@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Arcadia - 힐링 광장</title>
+    <title>아르카디아 - 파이오니어 힐링 광장</title>
     <style>
-        body { text-align: center; font-family: sans-serif; background: #f0f8ff; padding-top: 50px; }
-        h1 { color: #4682b4; }
-        button { padding: 15px 30px; font-size: 20px; cursor: pointer; background: #87ceeb; border: none; border-radius: 10px; }
+        body { text-align: center; font-family: sans-serif; background: #f0f8ff; padding: 50px; }
+        .product { border: 2px solid #87ceeb; padding: 20px; margin: 20px auto; width: 300px; border-radius: 15px; background: white; }
+        button { padding: 15px 30px; font-size: 18px; cursor: pointer; background: #87ceeb; border: none; border-radius: 10px; color: white; }
     </style>
 </head>
 <body>
     <h1>아르카디아에 오신 것을 환영합니다!</h1>
     <p>파이오니어들을 위한 힐링 공간</p>
-    <button onclick="alert('광장에 입장했습니다!')">광장 입장하기</button>
+
+    <div class="product">
+        <h3>아르카디아의 전설적인 검</h3>
+        <p>강력한 공격력을 가진 핵심 아이템입니다.</p>
+        <p>가격: 10 Pi</p>
+        <button onclick="orderProduct('검')">검 구매하기</button>
+    </div>
+
+    <div class="product">
+        <h3>아르카디아 생명 물약</h3>
+        <p>체력을 100 회복시켜주는 필수 아이템입니다.</p>
+        <p>가격: 2 Pi</p>
+        <button onclick="orderProduct('물약')">물약 구매하기</button>
+    </div>
+
+    <script>
+        function orderProduct(itemName) {
+            alert(itemName + '을(를) 구매하시겠습니까? (이 기능은 테스트용입니다)');
+            console.log(itemName + ' 구매 요청됨');
+        }
+    </script>
 </body>
 </html>
